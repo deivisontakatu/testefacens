@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #28a745; /* Verde mais vibrante */
+            background-color: #28a745;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -23,142 +23,54 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #218838; /* Verde mais escuro */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background-color: #218838;
+            padding: 10px 0;
         }
 
         nav a {
             color: white;
-            padding: 14px 20px;
+            padding: 0 15px;
             text-decoration: none;
-            text-align: center;
         }
 
         nav a:hover {
-            background-color: #1e7e34; /* Verde ainda mais escuro para hover */
+            text-decoration: underline;
         }
 
         .container {
             padding: 20px;
         }
 
-        .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            background-color: #228B22; /* Verde floresta para o fundo do hero */
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 1.5em;
-        }
-
-        .about, .services, .values, .stats, .team, .testimonials, .blog, .partners, .contact {
+        section {
             margin: 40px 0;
         }
 
-        .about h2, .services h2, .values h2, .stats h2, .team h2, .testimonials h2, .blog h2, .partners h2, .contact h2 {
+        h2 {
             text-align: center;
-            margin-bottom: 20px;
-            color: #28a745; /* Verde vibrante para títulos */
+            color: #28a745;
         }
 
-        .services .service-list, .team .team-list, .blog .blog-list, .partners .partner-list, .values .values-list, .stats .stats-list {
+        .service-list, .team-list, .blog-list, .partner-list {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
 
-        .service-item, .team-item, .blog-item, .partner-item, .value-item, .stat-item {
+        .service-item, .team-item, .blog-item, .partner-item {
             background: white;
             padding: 20px;
             margin: 10px;
             width: 30%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            border-top: 4px solid #28a745; /* Borda verde no topo */
-        }
-
-        .team-item img, .partner-item img {
-            max-width: 100%;
-            border-radius: 50%;
-        }
-
-        .stats .stats-list {
-            background-color: #28a745;
-            color: white;
-            padding: 20px;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .stat-item p {
-            font-size: 1.2em;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact input, .contact textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact button:hover {
-            background-color: #218838;
         }
 
         footer {
-            background-color: #218838; /* Verde escuro para o rodapé */
+            background-color: #218838;
             color: white;
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #28a745;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            text-decoration: none;
-            display: none;
-        }
-
-        .back-to-top:hover {
-            background-color: #218838;
         }
     </style>
 </head>
@@ -172,29 +84,17 @@
     <nav>
         <a href="#about">Sobre</a>
         <a href="#services">Serviços</a>
-        <a href="#values">Valores</a>
-        <a href="#stats">Estatísticas</a>
         <a href="#team">Equipe</a>
-        <a href="#testimonials">Depoimentos</a>
-        <a href="#blog">Blog</a>
-        <a href="#partners">Parceiros</a>
         <a href="#contact">Contato</a>
     </nav>
 
-    <div class="hero">
-        <div>
-            <h1>Bem-vindo à Minha Empresa</h1>
-            <p>Transformando ideias em realidade</p>
-        </div>
-    </div>
-
     <div class="container">
-        <section id="about" class="about">
+        <section id="about">
             <h2>Sobre Nós</h2>
-            <p>Somos uma empresa dedicada a fornecer soluções de alta qualidade para nossos clientes. Com anos de experiência no mercado, estamos prontos para ajudar você a alcançar seus objetivos. Nossa missão é oferecer serviços que impulsionem o crescimento do seu negócio, com foco em inovação e sustentabilidade.</p>
+            <p>Somos uma empresa dedicada a fornecer soluções de alta qualidade para nossos clientes. Com anos de experiência no mercado, estamos prontos para ajudar você a alcançar seus objetivos.</p>
         </section>
 
-        <section id="services" class="services">
+        <section id="services">
             <h2>Nossos Serviços</h2>
             <div class="service-list">
                 <div class="service-item">
@@ -212,121 +112,25 @@
             </div>
         </section>
 
-        <section id="values" class="values">
-            <h2>Nossos Valores</h2>
-            <div class="values-list">
-                <div class="value-item">
-                    <h3>Inovação</h3>
-                    <p>Buscamos constantemente novas soluções para atender às necessidades dos nossos clientes.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Integridade</h3>
-                    <p>Agimos com transparência e ética em todos os nossos negócios.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Sustentabilidade</h3>
-                    <p>Comprometidos com práticas que respeitam o meio ambiente e a sociedade.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="stats" class="stats">
-            <h2>Estatísticas</h2>
-            <div class="stats-list">
-                <div class="stat-item">
-                    <h3>+500</h3>
-                    <p>Clientes Satisfeitos</p>
-                </div>
-                <div class="stat-item">
-                    <h3>+100</h3>
-                    <p>Projetos Concluídos</p>
-                </div>
-                <div class="stat-item">
-                    <h3>+10</h3>
-                    <p>Anos de Experiência</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="team" class="team">
+        <section id="team">
             <h2>Nossa Equipe</h2>
             <div class="team-list">
                 <div class="team-item">
-                    <img src="team1.jpg" alt="Membro da Equipe 1">
                     <h3>João Silva</h3>
                     <p>CEO e Fundador</p>
                 </div>
                 <div class="team-item">
-                    <img src="team2.jpg" alt="Membro da Equipe 2">
                     <h3>Maria Souza</h3>
                     <p>Diretora de Marketing</p>
                 </div>
                 <div class="team-item">
-                    <img src="team3.jpg" alt="Membro da Equipe 3">
                     <h3>Carlos Oliveira</h3>
                     <p>Desenvolvedor Sênior</p>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="testimonials">
-            <h2>Depoimentos</h2>
-            <div class="testimonial-list">
-                <div class="testimonial-item">
-                    <p>"Excelente serviço! A empresa superou nossas expectativas."</p>
-                    <p>- Cliente Satisfeito</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Profissionais altamente qualificados e dedicados."</p>
-                    <p>- Outro Cliente</p>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Recomendo a todos que buscam qualidade e eficiência."</p>
-                    <p>- Mais um Cliente</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="blog">
-            <h2>Blog</h2>
-            <div class="blog-list">
-                <div class="blog-item">
-                    <h3>Como aumentar sua presença online</h3>
-                    <p>Dicas práticas para melhorar sua visibilidade na internet.</p>
-                    <a href="#">Leia mais</a>
-                </div>
-                <div class="blog-item">
-                    <h3>Benefícios do Marketing Digital</h3>
-                    <p>Entenda por que investir em marketing digital é essencial.</p>
-                    <a href="#">Leia mais</a>
-                </div>
-                <div class="blog-item">
-                    <h3>Tendências de Desenvolvimento Web</h3>
-                    <p>As últimas tendências em desenvolvimento web para 2023.</p>
-                    <a href="#">Leia mais</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="partners" class="partners">
-            <h2>Nossos Parceiros</h2>
-            <div class="partner-list">
-                <div class="partner-item">
-                    <img src="partner1.png" alt="Parceiro 1">
-                    <p>Empresa Tech</p>
-                </div>
-                <div class="partner-item">
-                    <img src="partner2.png" alt="Parceiro 2">
-                    <p>Inova Solutions</p>
-                </div>
-                <div class="partner-item">
-                    <img src="partner3.png" alt="Parceiro 3">
-                    <p>Digital Marketing Pro</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
+        <section id="contact">
             <h2>Contato</h2>
             <form action="#" method="post">
                 <input type="text" name="name" placeholder="Seu Nome" required>
@@ -339,22 +143,7 @@
 
     <footer>
         <p>&copy; 2023 Minha Empresa. Todos os direitos reservados.</p>
-        <p>Contato: contato@minhaempresa.com | (11) 1234-5678</p>
     </footer>
 
-    <a href="#" class="back-to-top" title="Voltar ao Topo">↑</a>
-
-    <script>
-        // Botão "Voltar ao Topo"
-        const backToTopButton = document.querySelector('.back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
